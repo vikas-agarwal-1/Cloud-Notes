@@ -28,7 +28,7 @@ const Login = () => {
     setError("");
 
     try {
-      const { data } = axios.post(
+      const { data } = await axios.post(
         "http://localhost:3004/auth/api/login",
         {
           email,
