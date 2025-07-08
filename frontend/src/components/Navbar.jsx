@@ -3,13 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import ProfileInfo from "./Cards/ProfileInfo";
 import SearchBar from "./SearchBar/SearchBar";
 import toast from "react-hot-toast";
-import axios from "../utils/axiosInstance.js";
+// import axios from "../utils/axiosInstance.js";
+import axios from "axios";
 
 const Navbar = ({ searchQuery, setSearchQuery }) => {
 
   const navigate = useNavigate();
 
-  const handleSearch = () => {};
+  // const handleSearch = () => {};
 
   const onClearSearch = () => {
     setSearchQuery("");
@@ -42,7 +43,7 @@ const Navbar = ({ searchQuery, setSearchQuery }) => {
       <SearchBar
         value={searchQuery}
         onChange={({ target }) => setSearchQuery(target.value)}
-        handleSearch={handleSearch}
+        // handleSearch={handleSearch}
         onClearSearch={onClearSearch}
       />
 

@@ -43,7 +43,7 @@ const Login = () => {
       );
 
       console.log(data);
-      toast.success("User Loggedin");
+      toast.success(data.message||"User Loggedin");
       localStorage.setItem("access_token", data.token);
       navigate("/");
       setEmail("");
